@@ -1,9 +1,7 @@
-"use client";
+""use client";
 import { educations } from "@/utils/data/educations";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import lottieFile from "../../../assets/lottie/study.json";
-import AnimationLottie from "../../helper/animation-lottie";
 
 function Education() {
     return (
@@ -24,8 +22,9 @@ function Education() {
                 </div>
             </div>
 
+            {/* Title */}
             <div className="flex justify-center my-5 lg:py-8">
-                <div className="flex  items-center">
+                <div className="flex items-center">
                     <span className="w-24 h-[2px] bg-[#1a1443]"></span>
                     <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
             Educations
@@ -34,12 +33,18 @@ function Education() {
                 </div>
             </div>
 
+            {/* Educations list */}
             <div className="py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                     <div className="flex justify-center items-start">
-                        <div className="w-3/4 h-3/4">
-                            <AnimationLottie animationPath={lottieFile} />
-                        </div>
+                        {/* Ici plus de Lottie → image statique */}
+                        <Image
+                            src="/education.svg"
+                            alt="Education Illustration"
+                            width={400}
+                            height={400}
+                            className="opacity-80"
+                        />
                     </div>
 
                     <div>
@@ -50,7 +55,7 @@ function Education() {
                                     className="relative p-3 text-white rounded-lg border border-[#25213b] shadow-md
                              bg-[#0f0a2c] overflow-hidden group"
                                 >
-                                    {/* effet glow animé */}
+                                    {/* Effet Glow animé */}
                                     <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 opacity-30 blur-xl group-hover:opacity-60 transition duration-500"></div>
 
                                     <div className="relative z-10">

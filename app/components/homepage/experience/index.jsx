@@ -2,8 +2,6 @@
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import experience from "../../../assets/lottie/code.json";
-import AnimationLottie from "../../helper/animation-lottie";
 
 function Experience() {
     return (
@@ -19,6 +17,7 @@ function Experience() {
                 className="absolute top-0 -z-10"
             />
 
+            {/* Title */}
             <div className="flex justify-center my-5 lg:py-8">
                 <div className="flex items-center">
                     <span className="w-24 h-[2px] bg-[#1a1443]"></span>
@@ -29,16 +28,20 @@ function Experience() {
                 </div>
             </div>
 
+            {/* Experiences list */}
             <div className="py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-                    {/* Animation */}
                     <div className="flex justify-center items-start">
-                        <div className="w-full h-full">
-                            <AnimationLottie animationPath={experience} />
-                        </div>
+                        {/* Ici, plus de Lottie → tu peux mettre une image statique */}
+                        <Image
+                            src="/experience.svg"
+                            alt="Experience Illustration"
+                            width={400}
+                            height={400}
+                            className="opacity-80"
+                        />
                     </div>
 
-                    {/* Experiences list */}
                     <div>
                         <div className="flex flex-col gap-6">
                             {experiences.map((experience) => (
