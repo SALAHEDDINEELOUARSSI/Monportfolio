@@ -1,3 +1,11 @@
+import dynamic from "next/dynamic";
+
+// Import client-only pour éviter l'erreur 'window is not defined'
+const ScrollToTop = dynamic(
+    () => import("./components/helper/scroll-to-top"),
+    { ssr: false }
+);
+
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
