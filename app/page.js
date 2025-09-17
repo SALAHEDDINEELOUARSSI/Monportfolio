@@ -10,6 +10,9 @@ import Skills from "./components/homepage/skills";
 import {Awards, certificates} from "../utils/data/blogs-data";
 
 
+import dynamic from 'next/dynamic';
+
+const AppContent = dynamic(() => import('./AppContent'), { ssr: false });
 
 
 
