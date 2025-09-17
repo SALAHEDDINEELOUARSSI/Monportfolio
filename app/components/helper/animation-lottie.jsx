@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 
 // Charger AnimationLottie uniquement côté client
 const AnimationLottie = dynamic(
-    () => import("./AnimationLottie"),
+    () => import("./animationLottie"),
     { ssr: false } // ❌ Pas de rendu côté serveur
 );
 
