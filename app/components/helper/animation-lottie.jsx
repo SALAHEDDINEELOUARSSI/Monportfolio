@@ -1,20 +1,18 @@
-"use client"
+// Server Component
+import dynamic from "next/dynamic";
 
-import Lottie from "lottie-react";
+// Charger AnimationLottie uniquement côté client
+const AnimationLottie = dynamic(
+    () => import("./AnimationLottie"),
+    { ssr: false } // ❌ Pas de rendu côté serveur
+);
 
-const AnimationLottie = ({ animationPath, width }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationPath,
-    style: {
-      width: '95%',
-    }
-  };
-
+export default function Hero() {
   return (
-    <Lottie {...defaultOptions} />
+      <div>
+        <h1>My Hero Section</h1>
+        <AnimationLottie animationPath={someAnimationJson} width={400} />
+      </div>
   );
-};
-
-export default AnimationLottie;
+}
+;
