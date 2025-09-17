@@ -2,6 +2,7 @@
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
+import experienceImg from "./experience.png"; // chemin relatif
 
 function Experience() {
     return (
@@ -34,10 +35,10 @@ function Experience() {
                     <div className="flex justify-center items-start">
                         {/* Ici, plus de Lottie → tu peux mettre une image statique */}
                         <Image
-                            src="/experience.svg"
-                            alt="Experience Illustration"
-                            width={400}
-                            height={400}
+                            src={experienceImg}
+                            alt="Experience Illustration12"
+                            width={450}
+                            height={450}
                             className="opacity-80"
                         />
                     </div>

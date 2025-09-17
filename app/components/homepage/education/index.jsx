@@ -2,6 +2,7 @@
 import { educations } from "@/utils/data/educations";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
+import educationImg from "./education.png"; // chemin relatif
 
 function Education() {
     return (
@@ -39,10 +40,10 @@ function Education() {
                     <div className="flex justify-center items-start">
                         {/* Ici plus de Lottie → image statique */}
                         <Image
-                            src="/education.svg"
+                            src={educationImg}
                             alt="Education Illustration"
-                            width={400}
-                            height={400}
+                            width={450}
+                            height={450}
                             className="opacity-80"
                         />
                     </div>
