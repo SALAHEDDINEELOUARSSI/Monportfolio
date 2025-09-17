@@ -1,3 +1,5 @@
+"use client"; 
+
 import dynamic from "next/dynamic";
 import { personalData } from "@/utils/data/personal-data";
 const AboutSection = dynamic(() => import("./components/homepage/about"), { ssr: false });
