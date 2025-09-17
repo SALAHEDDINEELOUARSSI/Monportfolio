@@ -1,7 +1,8 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
-const FaCode = dynamic(() => import("react-icons/fa").then(mod => mod.FaCode), { ssr: false });
-const FaPlay = dynamic(() => import("react-icons/fa").then(mod => mod.FaPlay), { ssr: false });
+import { FaCode, FaPlay } from 'react-icons/fa';
 import placeholder from '/public/png/placeholder.png';
 
 const SingleProject = ({ project }) => {

@@ -1,13 +1,13 @@
-// @flow strict
+"use client";
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
-const BsGithub = dynamic(() => import("react-icons/bs").then(mod => mod.BsGithub), { ssr: false });
-const BsLinkedin = dynamic(() => import("react-icons/bs").then(mod => mod.BsLinkedin), { ssr: false });
-const SiLeetcode = dynamic(() => import("react-icons/si").then(mod => mod.SiLeetcode), { ssr: false });
-const RiContactsFill = dynamic(() => import("react-icons/ri").then(mod => mod.RiContactsFill), { ssr: false });
-const MdDownload = dynamic(() => import("react-icons/md").then(mod => mod.MdDownload), { ssr: false });
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { MdDownload } from "react-icons/md";
+import { RiContactsFill } from "react-icons/ri";
+import { SiLeetcode } from "react-icons/si";
 
 function HeroSection() {
   return (
