@@ -3,8 +3,16 @@
 import { isValidEmail } from "@/utils/check-email";
 import axios from "axios";
 import { useState } from "react";
-import { TbMailForward } from "react-icons/tb";
+import dynamic from "next/dynamic";
 import { toast } from "react-toastify";
+const BiLogoLinkedin = dynamic(() => import("react-icons/bi").then(mod => mod.BiLogoLinkedin), { ssr: false });
+const CiLocationOn = dynamic(() => import("react-icons/ci").then(mod => mod.CiLocationOn), { ssr: false });
+const FaFacebook = dynamic(() => import("react-icons/fa").then(mod => mod.FaFacebook), { ssr: false });
+const FaStackOverflow = dynamic(() => import("react-icons/fa").then(mod => mod.FaStackOverflow), { ssr: false });
+const FaXTwitter = dynamic(() => import("react-icons/fa6").then(mod => mod.FaXTwitter), { ssr: false });
+const IoLogoGithub = dynamic(() => import("react-icons/io").then(mod => mod.IoLogoGithub), { ssr: false });
+const IoMdCall = dynamic(() => import("react-icons/io").then(mod => mod.IoMdCall), { ssr: false });
+const MdAlternateEmail = dynamic(() => import("react-icons/md").then(mod => mod.MdAlternateEmail), { ssr: false });
 
 function ContactForm() {
   const [error, setError] = useState({ email: false, required: false });
