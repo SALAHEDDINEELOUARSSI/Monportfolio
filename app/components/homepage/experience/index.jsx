@@ -6,7 +6,7 @@ import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
-const GlowCard = dynamic(() => import("../components/GlowCard"), { ssr: false });
+const GlowCard = dynamic(() => import("../../helper/GlowCard"), { ssr: false });
 
 function Experience() {
   return (

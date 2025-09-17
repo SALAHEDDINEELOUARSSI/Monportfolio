@@ -5,7 +5,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import lottieFile from '../../../assets/lottie/study.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import dynamic from "next/dynamic";
-const GlowCard = dynamic(() => import("../components/GlowCard"), { ssr: false });
+const GlowCard = dynamic(() => import("../../helper/GlowCard"), { ssr: false });
 
 function Education() {
   return (
